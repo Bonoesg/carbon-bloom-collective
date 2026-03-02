@@ -1,4 +1,5 @@
 import { useState } from "react";
+import bonoLogo from "@/assets/bono-logo.png";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -15,7 +16,8 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="font-display text-xl font-bold text-primary tracking-tight">
+        <a href="#" className="flex items-center gap-2 font-display text-xl font-bold text-primary tracking-tight">
+          <img src={bonoLogo} alt="Bono ESG" className="w-8 h-8" />
           Bono <span className="text-muted-foreground font-medium">ESG</span>
         </a>
 
