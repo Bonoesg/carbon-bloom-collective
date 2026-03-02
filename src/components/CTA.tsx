@@ -6,8 +6,11 @@ const CTA = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Placeholder for form submission
-    alert("Diagnóstico solicitado com sucesso! Entraremos em contato em breve.");
+    const subject = encodeURIComponent("Solicitação de Diagnóstico Preliminar");
+    const body = encodeURIComponent(
+      `Nome: ${form.nome}\nCargo: ${form.cargo}\nPrefeitura/Secretaria: ${form.prefeitura}\nE-mail: ${form.email}\nTelefone: ${form.telefone}`
+    );
+    window.location.href = `mailto:contato@bonoesg.com?subject=${subject}&body=${body}`;
     setForm({ nome: "", cargo: "", prefeitura: "", email: "", telefone: "" });
   };
 
@@ -32,12 +35,6 @@ const CTA = () => {
               Solicite um diagnóstico preliminar e conheça o potencial de geração de créditos
               de carbono existente no seu território.
             </p>
-            <a
-              href="#contato"
-              className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground px-8 py-4 text-base font-bold hover:bg-primary/90 transition-colors"
-            >
-              Solicitar Diagnóstico Preliminar
-            </a>
           </motion.div>
 
           <motion.div
