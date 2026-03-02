@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import bonoLogo from "@/assets/bono-logo.png";
 
 const Hero = () => {
   return (
@@ -31,7 +30,7 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center text-center"
         >
-          <img src={bonoLogo} alt="Bono ESG - CO₂" className="w-40 md:w-56 mb-10" />
+          
 
           <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-6">
             Tecnologia Climática & ESG
